@@ -39,7 +39,7 @@ init(autoreset=True)
 def clear():
     os.system("cls" if os.name == "nt" else "clear")
 
-# 🔥 Sexy animated intro
+
 intro = """
 ░█████╗░░█████╗░███╗░░░███╗███████╗████████╗
 ██╔══██╗██╔══██╗████╗░████║██╔════╝╚══██╔══╝
@@ -51,7 +51,7 @@ intro = """
          Press [Enter] to continue
 """
 
-# 🔰 Fancy logo centered
+
 def logo():
     logo_text = """
 ░█████╗░░█████╗░███╗░░░███╗███████╗████████╗
@@ -68,7 +68,6 @@ def logo():
 """
     print(Colorate.Vertical(Colors.blue_to_purple, Center.XCenter(logo_text)))
 
-# 🧠 Replace webhook in template
 def write_settings(webhook: str):
     try:
         with open("comet.py", "r", encoding="utf-8") as file:
@@ -79,7 +78,6 @@ def write_settings(webhook: str):
     except Exception as e:
         print(Center.XCenter(Fore.RED + f"[!] Error writing settings: {e}"))
 
-# 🧪 Build the payload
 def build_file(extension: str):
     clear()
     logo()
@@ -96,7 +94,6 @@ def build_file(extension: str):
     print()
     input(Center.XCenter(Fore.YELLOW + "Press Enter to return to the menu..."))
 
-# 🧭 Main menu with centered text
 def main_menu():
     clear()
     logo()
@@ -125,12 +122,9 @@ def main_menu():
             print(Center.XCenter(Fore.RED + "[!] Invalid choice."))
             time.sleep(1.5)
 
-# 💥 Launch
 if __name__ == "__main__":
     clear()
     Anime.Fade(Center.Center(intro), Colors.blue_to_purple, Colorate.Vertical, interval=0.035, enter=True)
     while True:
         imp.gay()
         main_menu()
-
-
